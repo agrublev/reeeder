@@ -1,0 +1,10 @@
+<div ng-controller="ListCtrl" class="feed">
+	<div ng-repeat="item in feed.stories | filter:filterText" ng-class-even="['type1','type2','type3','type4','type5']" class="brick">
+	    <div class="inner-brick">
+	        <h5 class="responsive">{{item.title}}</h5>
+	        <p class="text-left">{{item.contentSnippet}} <a target="_blank" href="{{item.link}}">view {{item.link}}</a></p>
+	        <span class="small">{{item.publishedDate | date:'short'}}</span>
+	    </div>
+	</div>
+	<br clear="all">
+</div>
